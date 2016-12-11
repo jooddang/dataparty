@@ -27,8 +27,7 @@ model.add(Activation("relu"))
 model.add(Dense(output_dim=1, activation='linear'))
 
 model.compile(loss='mse', optimizer='sgd')
-#model.fit(X_train, Y_train, batch_size=1000, nb_epoch=1000, validation_data=(X_test, Y_test))
-model.fit(X_train, Y_train, batch_size=10, nb_epoch=1, validation_data=(X_test, Y_test))
+model.fit(X_train, Y_train, batch_size=1000, nb_epoch=1000, validation_data=(X_test, Y_test))
 
 Y_test_predict = model.predict(X_test)
 
